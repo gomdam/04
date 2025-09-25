@@ -5,21 +5,12 @@
 
 int main(int argc, char *argv[]) 
 {
-	unsigned int x;
-	int b;
+	int sec;
 	
-	printf("input a number : ");
-	scanf("%ui", &x);
+	printf("input the second : ");
+	scanf("%i", &sec);
 	
-	for (b=0; x!=0; x>>=1)
-	{
-		if (x & 1) //x&1 은 x의 2진수 끝자리가 1이다 라는 뜻임
-		{
-			b++;
-		}
-	}
-	
-	printf("the result is : %i\n", b);
+	printf("the time for %i second is %i : %i : %i\n", sec, sec/3600, (sec%3600)/60, sec%60);
    
 	return 0;
 }
