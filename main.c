@@ -5,12 +5,21 @@
 
 int main(int argc, char *argv[]) 
 {
-	int year;
+	unsigned int x;
+	int b;
 	
-	printf("input the year : ");
-	scanf("%i", &year);
+	printf("input a number : ");
+	scanf("%ui", &x);
 	
-	printf("is the year %i the leap year? : %i\n", year, (year%4 == 0 && year%100 != 0) || (year%400 == 0));
+	for (b=0; x!=0; x>>=1)
+	{
+		if (x & 1) //x&1 은 x의 2진수 끝자리가 1이다 라는 뜻임
+		{
+			b++;
+		}
+	}
+	
+	printf("the result is : %i\n", b);
    
 	return 0;
 }
